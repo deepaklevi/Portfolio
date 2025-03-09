@@ -1,0 +1,93 @@
+/* Main container */
+.educational_content {
+    height: 100vh;
+    background: url('/images/background3.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Container holding both image and text */
+.educational_contentContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    max-width: 1200px;
+    padding: 20px;
+    gap: 2em;
+    box-sizing: border-box;
+    /* Light background for contrast */
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* Image container */
+.myphoto3 {
+    width: 300px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 50px;
+    border: 3px solid rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect on image */
+.myphoto3:hover {
+    transform: scale(1.05);
+}
+
+/* Text content */
+.educational_contentContainer1 {
+    flex: 1;
+    padding: 20px;
+    text-align: left;
+    color: black; /* Changed text color to black */
+}
+
+/* Heading */
+.educational_contentContainer1 h1 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    color: black; /* Changed text color to black */
+    text-shadow: none;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Paragraph styles */
+.p1 {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: black; /* Changed text color to black */
+}
+
+.p2 {
+    font-size: 1.4em;
+    margin-top: 0.5em;
+    color: black; /* Changed text color to black */
+}
+
+.p3 {
+    margin-top: 1em;
+    font-size: 1.2em;
+    line-height: 1.5;
+    color: black; /* Changed text color to black */
+}
+
+/* Keyframe animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

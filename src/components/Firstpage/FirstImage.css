@@ -1,0 +1,141 @@
+/* 🌟 General Styling */
+.main_page {
+  height: 100vh;
+  background: url('/images/background1.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+/* 📌 Flexbox for Better Layout */
+.main_pageContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  padding: 3rem;
+}
+
+/* 🌟 Content Styling */
+.main_pageContent1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.main_pageContent1 h1 {
+  font-weight: 600;
+  color: rgb(28, 28, 28);
+  font-size: clamp(60px, 8vw, 120px); /* Responsive Font Size */
+  margin: 0;
+}
+
+.main_pageContent1 p {
+  font-weight: 400;
+  font-size: clamp(24px, 4vw, 40px);
+  margin: 0;
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+  color: rgb(42, 42, 42);
+}
+
+/* 🌟 Profile Image Styling */
+.myphoto {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid grey;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* 🔥 Hover Effect on Profile Image */
+.myphoto:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* 🔗 LinkedIn Link Styling */
+.linkedin-link {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 500;
+  color: black;
+  text-decoration: none;
+  margin-top: 1rem;
+  transition: color 0.3s ease-in-out;
+}
+
+.linkedin-link:hover {
+  color: #005582;
+}
+
+/* 🎭 LinkedIn Icon Styling */
+.linkedin-icon {
+  margin-right: 8px;
+  font-size: 30px;
+}
+
+/* 🌀 Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Apply Animations */
+.animated-name {
+  animation: fadeIn 1.2s ease-out;
+}
+
+.animated-image {
+  animation: scaleUp 1s ease-out;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 1024px) {
+  .main_pageContent {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .myphoto {
+    width: 250px;
+    height: 250px;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .main_pageContent1 h1 {
+    font-size: 60px;
+  }
+
+  .main_pageContent1 p {
+    font-size: 24px;
+  }
+
+  .myphoto {
+    width: 180px;
+    height: 180px;
+  }
+}

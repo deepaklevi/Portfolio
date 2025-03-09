@@ -1,0 +1,36 @@
+.shortVideo {
+    height: 100vh;
+    background: url('/images/background1.jpg') center/cover no-repeat;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.shortVideo h1 {
+    font-size: 3em;
+    text-align: center;
+    margin: 40px;
+    /* Ensure visibility on backgrounds */
+}
+
+.shortvideoLink {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 20px; /* Adds spacing between images */
+    flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+.shortvideoLink img {
+    width: 300px;
+    height: 450px;
+    max-width: 100%;
+    border-radius: 10px; /* Adds rounded corners for better aesthetics */
+    transition: transform 0.3s ease-in-out;
+}
+
+.shortvideoLink img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}

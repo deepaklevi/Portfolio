@@ -1,0 +1,109 @@
+.personalSkill_main {
+  height: 100vh;
+  background: url('/images/background2.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  overflow: hidden;
+}
+
+/* ✨ Fade-in effect for the main content */
+.personalSkill_mainContent {
+  text-align: center;
+  
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  max-width: 1000px;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(30px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.personalSkill_mainContent h1 {
+  font-size: 3em;
+  padding-bottom: 0.5em;
+  color: #222;
+}
+
+.personalSkill_mainContent p {
+  font-size: 1.2em;
+  text-align: center;
+  color: #444;
+  line-height: 1.5;
+}
+
+/* ✨ Slide-in effect for skill cards */
+.personalSkill_mainContentimg {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.personalSkill_mainContentimg1 {
+  text-align: center;
+  width: 200px;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: slideIn 1s ease-out forwards;
+}
+
+/* Delays for each item for a staggered effect */
+.personalSkill_mainContentimg1:nth-child(1) {
+  animation-delay: 0.3s;
+}
+.personalSkill_mainContentimg1:nth-child(2) {
+  animation-delay: 0.5s;
+}
+.personalSkill_mainContentimg1:nth-child(3) {
+  animation-delay: 0.7s;
+}
+
+@keyframes slideIn {
+  from {
+      opacity: 0;
+      transform: translateY(50px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.personalSkill_mainContentimg1 img {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* ✨ Hover effect to make images pop */
+.personalSkill_mainContentimg1 img:hover {
+  transform: scale(1.1);
+}
+
+.personalSkill_mainContentimg1 p {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 10px;
+}
