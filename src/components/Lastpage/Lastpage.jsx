@@ -43,7 +43,12 @@ const Lastpage = () => {
         {/* WhatsApp QR Code Section */}
         <div className="whatsapp-qr">
           <img
-            src="/images/qrcode.png"
+            
+  src={`${import.meta.env.BASE_URL}images/qrcode.png`}
+  alt="Scan this QR code to WhatsApp me"
+  className="qr-image"
+/>
+
             alt="Scan this QR code to WhatsApp me"
             className="qr-image"
           />
